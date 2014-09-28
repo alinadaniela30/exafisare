@@ -21,11 +21,11 @@ echo "<table border='1'>
 
 while($row = mysqli_fetch_array($result)) {
   echo "<tr>";
-  echo "<td>" . $row['Nume'] . "</td>";
-  echo "<td>" . $row['Prenume'] . "</td>";
-  echo "<td>" . $row['Varsta'] . "</td>";
-  echo "<td>" . $row['Oras'] . "</td>";
-  echo "<td>" . $row['Job'] . "</td>";
+  echo "<td>" . json_encode( $row['Nume']) . "</td>";
+  echo "<td>" . json_encode ($row['Prenume']) . "</td>";
+  echo "<td>" . json_encode ($row['Varsta']) . "</td>";
+  echo "<td>" . json_encode ($row['Oras']) . "</td>";
+  echo "<td>" . json_encode ($row['Job'] ). "</td>";
   echo "</tr>";
 }
 echo "</table>";
